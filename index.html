@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <style>
+        .ui-draggable-handle {
+            background: black;
+            color: white;=
+        }
+
+        .ui-dialog-buttonset button {
+            background: white;
+            transition: all 2s ease-in-out;
+        }
+        .ui-dialog-buttonset button:hover {
+            background: red;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<button id="btn_action">Return</button>
+<div id="mydialog" title="Refund Reason">
+    This is Test!!! <br />
+    <label><input type="radio" name="test" value="1" checked>選択肢1</label><br />
+    <label><input type="radio" name="test" value="2"> 選択肢2</label><br />
+</div>
+
+<script>
+    $(function() {
+
+        $("#mydialog").dialog({
+            autoOpen: false,
+            width: 500,
+            modal: true,
+            buttons: [{
+                text: 'Refund',
+                click: function() {
+                    alert("After clicking, function starts running");
+                }
+            }]
+
+        });
+
+        $("#btn_action").click(function() {
+           $("#mydialog").dialog("open");
+        });
+
+    })
+</script>
+
+</body>
+</html>
