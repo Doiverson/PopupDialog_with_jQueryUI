@@ -1,3 +1,5 @@
+<!--Moving Company Login Page-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,8 +31,12 @@
 <button id="btn_action">Return</button>
 <div id="mydialog" title="Refund Reason">
     This is Test!!! <br />
-    <label><input type="radio" name="test" value="1" checked>選択肢1</label><br />
-    <label><input type="radio" name="test" value="2"> 選択肢2</label><br />
+    <label><input type="radio" name="test" value="1" checked>Invalid Phone</label><br />
+    <label><input type="radio" name="test" value="2">Invalid E-mail</label><br />
+    <label><input type="radio" name="test" value="2">Duplicate lead</label><br />
+    <label><input type="radio" name="test" value="2">Customer is not moving within 6months</label><br />
+    <label><input type="radio" name="test" value="2">Only car shipping</label><br />
+
 </div>
 
 <script>
@@ -46,7 +52,6 @@
                     alert("After clicking, function starts running");
                 }
             }]
-
         });
 
         $("#btn_action").click(function() {
